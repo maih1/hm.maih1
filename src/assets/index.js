@@ -25,6 +25,9 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import kiai from "./company/kiai.png";
+import house3d from "./company/house3d.png";
+import samsung from "./company/samsung.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -59,4 +62,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  kiai,
+  house3d,
+  samsung,
 };
