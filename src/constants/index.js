@@ -26,6 +26,8 @@ import {
   kiai,
   house3d,
   samsung,
+  gamepiupiu,
+  logo,
 } from "../assets";
 
 export const navLinks = [
@@ -129,7 +131,7 @@ const experiences = [
     ],
   },
   {
-    title: "Python django Developer",
+    title: "Python Django Developer",
     company_name: "KiaiSoft",
     icon: kiai,
     iconBg: "#E6DEDD",
@@ -159,46 +161,40 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "The journey to becoming a developer",
+    name: "Mai Hoang",
+    image: logo,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "My choice",
+    name: "Mai Hoang",
+    image: logo,
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "first trip",
+    name: "Mai Hoang",
+    image: logo,
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "GALLERY 3D MODEL",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Website to show 3D files",
     tags: [
       {
-        name: "react",
+        name: "ThreeJs",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Javascript",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "scss",
         color: "pink-text-gradient",
       },
     ],
@@ -206,16 +202,16 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "CHANGE TEXTURE 3D",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Website for changing textures for 3D models",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "threejs",
         color: "green-text-gradient",
       },
       {
@@ -224,28 +220,24 @@ const projects = [
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/maih1/Change-texture-3D",
   },
   {
-    name: "Trip Guide",
+    name: "GAME NINJA PIU-PIU",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A game ninja",
     tags: [
       {
-        name: "nextjs",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "pygame",
         color: "green-text-gradient",
       },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: gamepiupiu,
+    source_code_link: "https://github.com/maih1/Piu-Piu",
   },
 ];
 

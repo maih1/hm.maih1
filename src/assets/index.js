@@ -32,6 +32,7 @@ import samsung from "./company/samsung.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import gamepiupiu from "./gamepiupiu.png";
 
 export {
   logo,
@@ -65,4 +66,5 @@ export {
   kiai,
   house3d,
   samsung,
+  gamepiupiu,
 };
