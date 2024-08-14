@@ -1,1 +1,1 @@
-java.lang.NoClassDefFoundError: Failed resolution of: Landroidx/core/view/SoftwareKeyboardControllerCompat
+-keep class androidx.core.view.SoftwareKeyboardControllerCompat { *; }
