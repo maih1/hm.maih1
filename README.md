@@ -1,32 +1,26 @@
-import android.accessibilityservice.AccessibilityServiceInfo
-import android.content.Context
-import android.view.accessibility.AccessibilityManager
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.menu_main, menu);
 
-class MyAccessibilityService : AccessibilityService() {
-    // ... các phương thức khác của AccessibilityService
+    MenuItem saveItem = menu.findItem(R.id.action_save);
+    SpannableString s = new SpannableString("Save");
 
-    override fun onServiceConnected() {
-        super.onServiceConnected()
+    // Kiểm tra xem có dịch vụ nào của Accessibility đang hoạt động hay không
+    AccessibilityManager am = (AccessibilityManager) getSystemService(ACCESSIBILITY_SERVICE);
+    boolean isAccessibilityEnabled = isAnyAccessibilityServiceEnabled(am);
 
-        val accessibilityManager = getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager
-        val enabled = accessibilityManager.isEnabled
-        val configured = accessibilityManager.isTouchExplorationEnabled
+    // Nếu tính năng Highlight button đang bật, set màu text khác để đảm bảo hiển thị
+    int color = isAccessibilityEnabled ? Color.WHITE : Color.BLACK;
+    s.setSpan(new ForegroundColorSpan(color), 0, s.length(), 0);
 
-        // Kiểm tra các cài đặt khác liên quan đến Vision Enhancements
-        val serviceInfo = serviceInfo
-        if (serviceInfo != null) {
-            val flags = serviceInfo.flags
-            val canRetrieveWindowContent = flags and AccessibilityServiceInfo.FLAG_RETRIEVE_INTERACTIVE_WINDOW_CONTENT != 0
-            // ... kiểm tra các cờ khác
-        }
+    saveItem.setTitle(s);
+    return true;
+}
 
-        // Logic xử lý dựa trên kết quả kiểm tra
-        if (enabled && configured && canRetrieveWindowContent) {
-            // Tính năng highlight button được bật
-            // Thực hiện các hành động cần thiết
-        } else {
-            // Tính năng highlight button không được bật
-            // Thực hiện các hành động khác
-        }
+private boolean isAnyAccessibilityServiceEnabled(AccessibilityManager am) {
+    if (am != null && am.isEnabled()) {
+        List<AccessibilityServiceInfo> enabledServices = am.getEnabledAccessibilityServiceList(AccessibilityServiceInfo.FEEDBACK_ALL_MASK);
+        return !enabledServices.isEmpty();
     }
+    return false;
 }
