@@ -1,2 +1,3 @@
-val color = context.getTheme().resolveAttribute(android.R.attr.textColorPrimaryInverse, true)
-spannable.setSpan(ForegroundColorSpan(color), 0, spannable.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+val typedValue = TypedValue()
+        theme.resolveAttribute(android.R.attr.textColorPrimaryInverse, typedValue, true)
+        val color = typedValue.data
